@@ -1,18 +1,20 @@
 import { Injectable, inject } from '@angular/core';
+import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 
-const BASE_URL = 'https://jsonplaceholder.typicode.com/posts?_limit=10';
+const apiURL = environment.apiURL;
+const apikey = environment.apikey
 
 @Injectable({
   providedIn: 'root'
 })
-export class MovieService {
 
+export class MovieService {
   private http = inject(HttpClient);
 
   constructor() { }
 
-  getPosts(){
-    return this.http.get(BASE_URL);
+  getMovies(){
+    return this.http.get(`${apiURL}?api_key=${apikey}`);
   }
 }
