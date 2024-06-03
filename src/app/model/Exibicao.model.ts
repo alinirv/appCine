@@ -12,7 +12,7 @@ export class Exibicao{
     this.id = 0;
     this.filme = new Filme();
     this.sala = new Sala();
-    this.dataExibicao = new Date();
+    this.dataExibicao = new Date;
     this.horaExibicao = 0;
   }
 
@@ -29,7 +29,7 @@ export class Exibicao{
   }
 
   getHoraExibicao(){
-    return this.getHoraExibicao;
+    return this.horaExibicao;
   }
 
 }
