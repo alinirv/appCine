@@ -5,12 +5,14 @@ import { Filme } from '../../model/Filme.model';
 import { Sala } from '../../model/Sala.model';
 import { MovieService } from '../../service/movie.service';
 import { MatCardModule } from '@angular/material/card';
+import {MatToolbarModule} from '@angular/material/toolbar';
+
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ MatCardModule],
+  imports: [ MatCardModule, MatToolbarModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
   
