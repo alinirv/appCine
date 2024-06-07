@@ -1,1 +1,15 @@
-<p>movie works!</p>
+<div class="container">
+    <div class="row">
+        @for (exibicao of exibicoes; track exibicao.id){
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>{{ exibicao.getFilme().titulo }}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <p>Sala: {{ exibicao.getSala().nome }}</p>
+                    <p>{{ exibicao.getFilme().descricao }}</p>
+                </mat-card-content>
+            </mat-card>
+        }
+    </div>
+  </div>
