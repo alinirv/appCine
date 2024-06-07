@@ -1,15 +1,18 @@
-<div class="container">
-    <div class="row">
-        @for (exibicao of exibicoes; track exibicao.id){
+
+<mat-grid-list cols="3" rowHeight="2:1" >
+    <mat-grid-tile>
+        @for (filme of listaFilme; track filme.id){   
             <mat-card>
                 <mat-card-header>
-                    <mat-card-title>{{ exibicao.getFilme().titulo }}</mat-card-title>
+                    <mat-card-title>{{ filme.titulo }}</mat-card-title>
                 </mat-card-header>
+                <img mat-card-image [src]="'https://image.tmdb.org/t/pw500'+filme.image" alt="{{ filme.titulo }}">
                 <mat-card-content>
-                    <p>Sala: {{ exibicao.getSala().nome }}</p>
-                    <p>{{ exibicao.getFilme().descricao }}</p>
+                <p>{{ filme.descricao }}</p>
                 </mat-card-content>
             </mat-card>
         }
-    </div>
-  </div>
+    </mat-grid-tile>
+    
+</mat-grid-list>
+  

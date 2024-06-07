@@ -5,11 +5,12 @@ import { Sala } from '../../model/Sala.model';
 import { MovieService } from '../../service/movie.service';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @Component({
   selector: 'app-movie',
   standalone: true,
-  imports: [ MatCardModule, MatToolbarModule],
+  imports: [ MatCardModule, MatToolbarModule, MatGridListModule],
   templateUrl: './movie.component.html',
   styleUrl: './movie.component.css'
 })
@@ -17,11 +18,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 export class MovieComponent  implements OnInit {
   private movieService = inject(MovieService);
 
-  exibicoes: Exibicao[] = [];
+  listaFilme: Filme[] = [];
   movies: any = [];
 
   ngOnInit(): void {
-    this.loadExibicao()
+    this.loadFilmeCartaz()
+
   }
 
   loadMovies(){
@@ -34,31 +36,22 @@ export class MovieComponent  implements OnInit {
     })
   }
 
-  loadExibicao(){
-
+  loadFilmeCartaz(){
     this.movieService.getMovies().subscribe((movies: any) => {
-      this.exibicoes = movies.results.map((movie: any) => {
+      this.listaFilme = movies.results.map((movie: any) => {
         const filme = new Filme();
         filme.id = movie.id;
-        filme.titulo = movie.title;
+        filme.titulo = movie.original_title;
         filme.descricao = movie.overview;
         filme.ano_release = new Date(movie.release_date).getFullYear();
-        filme.duracao = movie.runtime; // Supondo que a API retorne a duração
         filme.avaliacao = movie.vote_average;
-        
-        const sala = new Sala();
-        sala.id = 1; // Defina um valor de exemplo ou obtenha da API
-        sala.nome = "Sala 1"; // Defina um valor de exemplo ou obtenha da API
-        
-        const exibicao = new Exibicao();
-        exibicao.id = movie.id;
-        exibicao.filme = filme;
-        exibicao.sala = sala;
-        exibicao.dataExibicao =new Date( '2024-06-10'); // Defina a data de exibição desejada
-        exibicao.horaExibicao = 1400; // Defina a hora de exibição desejada
-
-        return exibicao;
+        filme.linguagem = movie.original_language;
+        filme.image = movie.backdrop_path;
+        console.log(filme)
+        return filme;
       });
     });
   }
+
+
 }
