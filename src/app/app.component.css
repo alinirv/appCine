@@ -9,3 +9,8 @@ mat-toolbar {
   padding: 20px;
   background-color: #f5f5f5;
 }
+
+.table{
+  margin: 0 auto;
+  width: 600px;
+}
