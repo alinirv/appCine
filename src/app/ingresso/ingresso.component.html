@@ -1,1 +1,25 @@
-<p>ingresso works!</p>
+<table>
+    <thead>
+      <tr>
+        <th>Tipo do ingresso</th>
+        <th>Valor</th>
+        <th>Exibição</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+        <th>Meia entrada</th>
+        <th>R${{ingresso.getPreco()/2}}</th>
+        <th>{{ingresso.getExibicao().getDate().toString().padStart(2, '0') + '/' +
+          (this.ingresso.exibicao.getMonth() + 1).toString().padStart(2, '0') + '/' +
+          this.ingresso.exibicao.getFullYear()}}</th>
+      </tr>
+      <tr>
+        <th>Entrada</th>
+        <th>R${{ingresso.getPreco()}}</th>
+        <th>{{ingresso.getExibicao().getDate().toString().padStart(2, '0') + '/' +
+          (this.ingresso.exibicao.getMonth() + 1).toString().padStart(2, '0') + '/' +
+          this.ingresso.exibicao.getFullYear()}}</th>
+      </tr>
+   </tbody>
+</table>
