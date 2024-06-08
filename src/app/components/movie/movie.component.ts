@@ -45,7 +45,7 @@ export class MovieComponent  implements OnInit {
         filme.ano_release = new Date(movie.release_date).getFullYear();
         filme.avaliacao = movie.vote_average;
         filme.linguagem = movie.original_language;
-        filme.image = movie.backdrop_path;
+        filme.image = movie.poster_path;
         return filme;
       });
     });
