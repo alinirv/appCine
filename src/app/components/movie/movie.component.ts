@@ -30,7 +30,6 @@ export class MovieComponent  implements OnInit {
     this.movieService.getMovies().subscribe({
       next: (res:any)=>{
         this.movies=res.results;
-        console.log(res.results);
       },
       error: (error)=>console.log('Erro ao realizar um fetch ds filmes', error)
     })
@@ -47,7 +46,6 @@ export class MovieComponent  implements OnInit {
         filme.avaliacao = movie.vote_average;
         filme.linguagem = movie.original_language;
         filme.image = movie.backdrop_path;
-        console.log(filme)
         return filme;
       });
     });
