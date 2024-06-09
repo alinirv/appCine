@@ -1,18 +1,27 @@
 <mat-toolbar color="primary">
-  <span>CineStar</span>
+  <span >CineStar</span>
+  <mat-toolbar-row>
+    <a mat-button routerLink="#" [fragment]="'#home'"><!-- <mat-icon>movie</mat-icon> --> Home</a>
+    <a mat-button routerLink="#" [fragment]="'#movies'"><!-- <mat-icon>movie</mat-icon> --> Lançamentos</a>
+    <a mat-button routerLink="#" [fragment]="'#salas'"><!-- <mat-icon>theaters</mat-icon> -->Salas</a>
+    <a mat-button routerLink="#" [fragment]="'#ingressos'"> <!-- <mat-icon>confirmation_number</mat-icon> -->Ingressos</a>
+</mat-toolbar-row>
 </mat-toolbar>
+
+<router-outlet></router-outlet>
+
 <div class="container">
-  <section>
+  <section id="movies">
     <app-movie></app-movie>
   </section>
-  <section>
+  <section id="salas">
     <app-sala></app-sala> 
   </section>
-  <section class="table">
-    
+  <section class="table" id="ingressos">
     <app-ingresso></app-ingresso>
   </section>
 </div>
+
 
 
 

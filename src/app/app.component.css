@@ -4,14 +4,30 @@ mat-toolbar {
   z-index: 1000;
 }
 
-.container {
-
-  padding: 20px;
-  background-color: #f5f5f5;
+.toolbar-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-right: 1em;
 }
 
-.table{
-  margin: 0 auto;
-  width: 600px;
+.spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar-row {
+  display:inline;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+  
+}
+
+a[mat-button] {
+  color: white;
+  font-weight: bold;
+}
+
+a[mat-button] mat-icon {
+  margin-right: 0.5em;
 }
 
