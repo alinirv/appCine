@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Ingresso } from '../model/Ingresso.model';
+import { Ingresso } from '../../model/Ingresso.model';
 import {MatTableModule} from '@angular/material/table';
 
 @Component({
