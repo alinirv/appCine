@@ -39,6 +39,5 @@ export class MovieComponent  implements OnInit {
   trackById(index: number, star: string) {
     return index;
   }
-  
 }
 

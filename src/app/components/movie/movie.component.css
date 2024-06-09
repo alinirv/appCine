@@ -1,13 +1,27 @@
-mat-grid-list {
+.movie-poster {
+  display: flex; /* Enable flexbox layout */
+  align-items: center; /* Align items vertically in the center */
+  max-width:auto;
+  background-color:rgb(29, 28, 28); /* Light background color */
+  color: #333; /* Dark text color for better contrast */
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
   margin: 30px;
   padding: 30px;
 }
 
-
-mat-grid-tile {
-  padding: 20px;
+h3 {
+  margin: 5px 0;
+  text-align: center; /* Align text to the left */
+  color: rgb(46, 45, 45);
+  padding: auto;
 }
-
+.movie-poster img {
+  width: auto;
+  border-radius: 10px;
+}
 mat-card {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -19,9 +33,9 @@ mat-card {
 }
 
 mat-card-header {
-  background-color: #f5f5f5;
-  text-align: center;
-  padding: 20px;
+  color: whitesmoke;
+  text-align: left;
+  
 }
 
 mat-card-title {
@@ -29,12 +43,7 @@ mat-card-title {
   font-weight: bold;
   text-align: center;
   align-items: center;
-}
-
-mat-card-image {
   padding: 10px;
-  height: 100px;
-  object-fit: cover;
 }
 
 mat-card-content {
@@ -43,26 +52,30 @@ mat-card-content {
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 10px;
+  color: whitesmoke;
+}
+mat-card-actions {
+  align-items: center;
+}
+mat-card-actions .rating mat-icon.full {
+  color: gold;
 }
 
-.movie-description {
-  margin: 0;
-  font-size: 1em;
-  color: #666;
+mat-card-actions .rating mat-icon.empty {
+  color:transparent;
 }
 
-mat-card-footer {
-  text-align: center;
-  padding: 10px 0;
+.movie-poster.rating {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  margin-top: 10px;
 }
 
-
-.full {
-  color: #ffd700; 
+.movie-poster.rating i {
+  font-size: 20px;
+  color: #ffc107;
+  margin: 0 5px;
+  transition: transform 0.3s ease-in-out;
 }
-
-.empty {
-  
-  color: transparent;
-}
-
