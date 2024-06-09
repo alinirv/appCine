@@ -1,18 +1,29 @@
 <div class="movie-card">
+    <mat-grid-list cols="2" rowHeight="1:2" gutterSize="16px" >
+        @for (filme of listaFilme; track filme.id){   
+          
+          
+        }
+    </mat-grid-list>
+     
     <div class="movie-header">
       <h2 class="movie-title">Sala 1</h2>
-      <h2 class="movie-subtitle">Amigos Imaginário</h2>
-      <p class="date">2024-08-07</p>
+      <!--<h2 class="movie-subtitle">{{listaFilme[0].titulo}}</h2>-->
+     <h2>{{getFilme(653346)?.titulo}}</h2>
+     
+      <p class="date">{{getFilme(653346)?.ano_release}}</p>
+     
     </div>
-    
+
     <div class="movie-body">
-      <img src="path/to/your/image.png" alt="Título" class="poster">
-      <p class="description">
-        Depois de descobrir que pode ver os amigos imaginários de todos, uma garota embarca em uma aventura mágica para reconectar amigos imaginários esquecidos
-      </p>
-      <a href="https://www.youtube.com/watch?v=ss2KvK-w6w8" target="_blank" class="watch-link">Assistir</a>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/ss2KvK-w6w8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-   
+    
+        <img src="https://image.tmdb.org/t/p/w500/{{ getFilme(653346)?.image }}" alt="Título" class="poster">
+    
+      <p class="description"> {{ getFilme(653346)?.descricao }} </p>
+     
+     <!-- <a href="https://www.youtube.com/watch?v=ss2KvK-w6w8" target="_blank" class="watch-link">Assistir</a>-->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/k2A0A1gehLg?start=3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
     
     </div>
     
