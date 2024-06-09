@@ -30,7 +30,8 @@
     color: #777;
     font-size: 0.9em;
   }
-  
+
+
   .movie-body {
     padding: 20px;
     text-align: center;
@@ -56,6 +57,7 @@
   .movie-footer {
     padding: 20px;
     text-align: center;
+
   }
   
   .watch-link {
@@ -71,3 +73,9 @@
   .watch-link:hover {
     background-color: #0056b3;
   }
+
+  div > h6 {
+    color:#2b00fe;
+
+  }
+  
