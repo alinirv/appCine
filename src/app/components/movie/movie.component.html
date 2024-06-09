@@ -1,18 +1,21 @@
-
-<mat-grid-list cols="3" rowHeight="2:1" >
-    <mat-grid-tile>
-        @for (filme of listaFilme; track filme.id){   
-            <mat-card>
-                <mat-card-header>
-                    <mat-card-title>{{ filme.titulo }}</mat-card-title>
-                </mat-card-header>
-                <img mat-card-image [src]="'https://image.tmdb.org/t/p/w500'+filme.image" alt="{{ filme.titulo }}">
-                <mat-card-content>
-                <p>{{ filme.descricao }}</p>
-                </mat-card-content>
-            </mat-card>
-        }
-    </mat-grid-tile>
-    
-</mat-grid-list>
+<mat-grid-list cols="2" rowHeight="1:2" gutterSize="16px" >
+    @for (filme of listaFilme; track filme.id){   
+      <mat-grid-tile [style.margin]=" '10px' ">
+        <mat-card class="movie-card" [style.margin]=" '10px' ">
+          <mat-card-header>
+            <mat-card-title>{{ filme.titulo }}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image [src]="'https://image.tmdb.org/t/p/w500' + filme.image" alt="{{ filme.titulo }}">
+          <mat-card-content>
+            <p class="movie-description">{{ filme.descricao }}</p>
+          </mat-card-content>
+          <mat-card-footer class="rating">
+            <ng-container fxLayout="row" fxLayoutGap="5px">
+                <mat-icon *ngFor="let star of getStars(filme.avaliacao); trackBy: trackById" [class.full]="star === 'full'" [class.empty]="star === 'empty'">star</mat-icon>
+              </ng-container>
+          </mat-card-footer>
+        </mat-card>
+      </mat-grid-tile>
+    }
+  </mat-grid-list>
   
