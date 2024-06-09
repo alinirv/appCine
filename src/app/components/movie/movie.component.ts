@@ -24,11 +24,13 @@ export class MovieComponent  implements OnInit {
 
   ngOnInit(): void {
     this.movieSharedService.filmes$.subscribe((filmes: Filme[]) => {
-      this.listaFilme = filmes;
+      // Ordena os filmes pela data de lançamento e pega os 4 mais recentes
+      this.listaFilme = filmes
+        .sort((a, b) => new Date(b.ano_release).getTime() - new Date(a.ano_release).getTime())
+        .slice(0, 4);
     });
     this.movieSharedService.loadFilmes();
   }
-
   getStars(avaliacao: number): string[] {
     const fullStars = Math.min(5, Math.max(1, Math.floor(avaliacao / 2)));
     const emptyStars = 5 - fullStars;
