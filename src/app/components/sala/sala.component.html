@@ -1,5 +1,10 @@
 <div class="movie-card">
-   
+    <mat-grid-list cols="2" rowHeight="1:2" gutterSize="16px" >
+        @for (filme of listaFilme; track filme.id){   
+          
+          
+        }
+    </mat-grid-list>
      
     <div class="movie-header">
       <h2 class="movie-title">Sala 1</h2>
@@ -12,18 +17,9 @@
 
     <div class="movie-body">
     
-       <!-- <img src="{{ getFilme(653346)?.image }}"  alt="Título" class="poster">-->
-
-        <!-- Usando um URL direto para a imagem -->
-        <img src="https://davistheater.com/wp-content/uploads/2024/05/gKkl37BQuKTanygYQG1pyYgLVgf-scaled.jpg" alt="Título" class="poster">
-
-
-       
-      
-      <p class="description">
-        {{ getFilme(653346)?.descricao }}
-
-      </p>
+        <img src="https://image.tmdb.org/t/p/w500/{{ getFilme(653346)?.image }}" alt="Título" class="poster">
+    
+      <p class="description"> {{ getFilme(653346)?.descricao }} </p>
      
      <!-- <a href="https://www.youtube.com/watch?v=ss2KvK-w6w8" target="_blank" class="watch-link">Assistir</a>-->
       <iframe width="560" height="315" src="https://www.youtube.com/embed/k2A0A1gehLg?start=3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
