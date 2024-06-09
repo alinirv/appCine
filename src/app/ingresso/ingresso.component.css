@@ -1,10 +1,10 @@
 table {
-  width: 80%;
+  width: 100%;
   border-collapse: collapse;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin-bottom: 20px;
-  border-radius: 50px;
-  background-color: #2c6676b3;
+  border-radius: 25px;
+  background-color: #2c667690;
 }
 
 th, td {

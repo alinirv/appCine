@@ -4,6 +4,7 @@
         <th>Tipo do ingresso</th>
         <th>Valor</th>
         <th>Exibição</th>
+        <th>Tipo de filme</th>
       </tr>
    </thead>
    <tbody>
@@ -13,6 +14,7 @@
         <th>{{ingresso.getExibicao().getDate().toString().padStart(2, '0') + '/' +
           (this.ingresso.exibicao.getMonth() + 1).toString().padStart(2, '0') + '/' +
           this.ingresso.exibicao.getFullYear()}}</th>
+        <th>3D e 2D</th>
       </tr>
       <tr>
         <th>Entrada</th>
@@ -20,6 +22,8 @@
         <th>{{ingresso.getExibicao().getDate().toString().padStart(2, '0') + '/' +
           (this.ingresso.exibicao.getMonth() + 1).toString().padStart(2, '0') + '/' +
           this.ingresso.exibicao.getFullYear()}}</th>
+        <th>3D e 2D</th>
       </tr>
    </tbody>
+
 </table>
