@@ -82,9 +82,27 @@
   h3 {
     margin: 5px 0;
     text-align: center; 
-    color: rgb(46, 45, 45);
+    color:rgb(46,45,45);
     padding: auto;
     align-items: center;
     font-weight:bolder;
   }
+  
+
+
+    .section-title {
+        color: red;
+        font-weight: bold;
+        margin: 20px 0;
+    }
+    .schedule {
+        color: blue;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+    .footer {
+        margin-top: 40px;
+        color: brown;
+        font-weight: bold;
+    }
   
