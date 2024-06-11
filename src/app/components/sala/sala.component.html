@@ -22,47 +22,83 @@
   <div class="movie-footer">
    
 
-    <div class="movie-footer">
-        <p class="details">AVENTURA | DUBLADO | 1H45 MIN</p>
-        <p class="classification">CLASSIFICAÇÃO: 16</p>
+        <div class="movie-footer">
+            <p class="details">AVENTURA | DUBLADO | 1H45 MIN</p>
+            <p class="classification">CLASSIFICAÇÃO: 16</p>
 
-         <div class="section-title">DUBLADO:</div>
-        <div class="schedule">QUI | SEX | SEG | TER | QUA: 17H</div>
-        <div class="schedule">SÁB | DOM: 21H45</div>
-        <br>
-        <div class="section-title">LEGENDADO:</div>
-        <div class="schedule">QUI | SEX | SEG | TER | QUA: 21H45</div>
-        <div class="schedule">SÁB | DOM: 17H</div>
-        <div class="footer">COMPRE SEU INGRESSO ONLINE!!!!</div>
+            <div class="section-title">DUBLADO:</div>
+            <div class="schedule">QUI | SEX | SEG | TER | QUA: 17H</div>
+            <div class="schedule">SÁB | DOM: 21H45</div>
+            <br>
+            <div class="section-title">LEGENDADO:</div>
+            <div class="schedule">QUI | SEX | SEG | TER | QUA: 21H45</div>
+            <div class="schedule">SÁB | DOM: 17H</div>
+            <div class="footer">COMPRE SEU INGRESSO ONLINE!!!!</div>
 
-    
+        
 
-    <div>
+        <div>
 
-        <!--SALA2-->
+            <!--SALA2-->
 
-    <div class="movie-header">
-            <h2 class="movie-title">Sala 2</h2>
+        <div class="movie-header">
+                <h2 class="movie-title">Sala 2</h2>
+                
+                <h2>{{getFilme(929590)?.titulo}}</h2>
+                <p class="date">{{getFilme(653346)?.ano_release}}</p>
+            </div>
             
-            <h2>{{getFilme(929590)?.titulo}}</h2>
-            <p class="date">{{getFilme(653346)?.ano_release}}</p>
-          </div>
+            <div class="movie-body">
+                
+                <img src="https://image.tmdb.org/t/p/w500/{{ getFilme(929590)?.image }}" alt="Título" class="poster">
+                <p class="description"> {{ getFilme(929590)?.descricao }} </p>
+                <!-- <a href="https://www.youtube.com/watch?v=ss2KvK-w6w8" target="_blank" class="watch-link">Assistir</a>-->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/aDyQxtg0V2w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+            
+            </div>
+            
+            <div class="movie-footer">
+                <p class="details">AVENTURA | DUBLADO | 1H44 MIN</p>
+                <p class="classification">CLASSIFICAÇÃO: 16</p>
+
+                <div class="section-title">DUBLADO:</div>
+                <div class="schedule">QUI | SEX | SEG | TER | QUA: 17H</div>
+                <div class="schedule">SÁB | DOM: 21H45</div>
+                <br>
+                <div class="section-title">LEGENDADO:</div>
+                <div class="schedule">QUI | SEX | SEG | TER | QUA: 21H45</div>
+                <div class="schedule">SÁB | DOM: 17H</div>
+                <div class="footer">COMPRE SEU INGRESSO ONLINE!!!!</div>
+            
+            </div>
+        </div>
+
+        <!--SALA 3-->
+
+        <div class="movie-header">
+            <h2 class="movie-title">Sala 3 </h2>
+            
+            <h2>{{getFilme(823464)?.titulo}}</h2>
+            <p class="date">{{getFilme( 823464)?.ano_release}}</p>
+        </div>
         
-          <div class="movie-body">
-              
-            <img src="https://image.tmdb.org/t/p/w500/{{ getFilme(929590)?.image }}" alt="Título" class="poster">
-            <p class="description"> {{ getFilme(929590)?.descricao }} </p>
-            <!-- <a href="https://www.youtube.com/watch?v=ss2KvK-w6w8" target="_blank" class="watch-link">Assistir</a>-->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/aDyQxtg0V2w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="movie-body">
+            
+            <img src="https://image.tmdb.org/t/p/w500/{{ getFilme( 823464)?.image }}" alt="Título" class="poster">
+            <p class="description"> {{ getFilme( 823464)?.descricao }} </p>
         
-          
-          </div>
-          
-          <div class="movie-footer">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/kcLc05W7GCY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        
+        
+        </div>
+        
+        <div class="movie-footer">
             <p class="details">AVENTURA | DUBLADO | 1H44 MIN</p>
             <p class="classification">CLASSIFICAÇÃO: 16</p>
 
-             <div class="section-title">DUBLADO:</div>
+            <div class="section-title">DUBLADO:</div>
             <div class="schedule">QUI | SEX | SEG | TER | QUA: 17H</div>
             <div class="schedule">SÁB | DOM: 21H45</div>
             <br>
@@ -71,11 +107,47 @@
             <div class="schedule">SÁB | DOM: 17H</div>
             <div class="footer">COMPRE SEU INGRESSO ONLINE!!!!</div>
         
-          </div>
-    </div>
+        </div>
 
-    
-</div>
+
+
+        <!--SALA 4-->
+
+        <div class="movie-header">
+            <h2 class="movie-title">Sala 4 </h2>
+            
+            <h2>{{getFilme(573435)?.titulo}}</h2>
+            <p class="date">{{getFilme(573435)?.ano_release}}</p>
+        </div>
+        
+        <div class="movie-body">
+            
+            <img src="https://image.tmdb.org/t/p/w500/{{ getFilme(573435)?.image }}" alt="Título" class="poster">
+            <p class="description"> {{ getFilme(573435)?.descricao }} </p>
+        
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/NSKLJzDD-yA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        
+        
+        </div>
+        
+        <div class="movie-footer">
+            <p class="details">AVENTURA | DUBLADO | 1H44 MIN</p>
+            <p class="classification">CLASSIFICAÇÃO: 16</p>
+
+            <div class="section-title">DUBLADO:</div>
+            <div class="schedule">QUI | SEX | SEG | TER | QUA: 17H</div>
+            <div class="schedule">SÁB | DOM: 21H45</div>
+            <br>
+            <div class="section-title">LEGENDADO:</div>
+            <div class="schedule">QUI | SEX | SEG | TER | QUA: 21H45</div>
+            <div class="schedule">SÁB | DOM: 17H</div>
+            <div class="footer">COMPRE SEU INGRESSO ONLINE!!!!</div>
+        
+        </div>
+
+
+    </div>
 
 
         
