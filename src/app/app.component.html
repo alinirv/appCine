@@ -1,15 +1,18 @@
 <mat-toolbar color="primary">
-  <span >CineStar</span>
-  <mat-toolbar-row>
-    <a mat-button routerLink='/movies'><!-- <mat-icon>movie</mat-icon> --> Lançamentos</a>
-    <a mat-button routerLink='/salas'><!-- <mat-icon>theaters</mat-icon> -->Salas</a>
-    <a mat-button routerLink='/ingressos'> <!-- <mat-icon>confirmation_number</mat-icon> -->Ingressos</a>
-</mat-toolbar-row>
+  <span id="titulo"><mat-icon>star</mat-icon>CineStar<mat-icon>star</mat-icon></span>
+  <ul>
+    <a mat-button routerLink="/">Home</a>
+    <a mat-button routerLink="/movies">Lançamentos</a>
+    <a mat-button routerLink="/salas">Salas</a>
+    <a mat-button routerLink="/ingressos">Ingressos</a>
+  </ul>  
+ 
 </mat-toolbar>
 
 <router-outlet></router-outlet>
 
 <div class="container">
+
   <section id="movies">
     <app-movie></app-movie>
   </section>
@@ -20,8 +23,41 @@
     <app-ingresso></app-ingresso>
   </section>
 </div>
-<footer>
-  <p>&copy; 2024 CineStar</p>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h6>Quick Links</h6>
+        <ul>
+          <li><a mat-button routerLink="/">Home</a></li>
+          <li><a mat-button routerLink="/movies">Lançamentos</a></li>
+          <li><a mat-button routerLink="/ingressos">Ingressos</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6>Follow Us</h6>
+        <ul>
+          <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6>Newsletter</h6>
+        <p>Stay updated with our latest news and offers!</p>
+        <form>
+          <input type="email" placeholder="Email Address">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="copyright">&copy; 2024 <a href="#">CineStar</a>. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
 </footer>
 
 

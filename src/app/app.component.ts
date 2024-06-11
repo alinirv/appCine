@@ -10,6 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 import { LocationStrategy } from '@angular/common';
+import { HomeComponent } from './components/home/home.component';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,7 @@ import { LocationStrategy } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   imports: [RouterOutlet, MovieComponent, MatToolbarModule, IngressoComponent, 
-    SalaComponent, MatTabsModule, RouterModule, MatIconModule]
+    SalaComponent, MatTabsModule, RouterModule, MatIconModule, HomeComponent]
 })
 
 export class AppComponent implements OnInit {

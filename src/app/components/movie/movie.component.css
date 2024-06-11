@@ -18,6 +18,7 @@ h3 {
   color: rgb(46, 45, 45);
   padding: auto;
   align-items: center;
+  font-weight:bolder;
 }
 .movie-poster img {
   width: auto;
