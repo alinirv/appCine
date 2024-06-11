@@ -7,6 +7,7 @@ import { SalaComponent } from './components/sala/sala.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
+import { Route } from '@angular/router';
 
 
 @Component({
@@ -18,5 +19,5 @@ import { RouterModule } from '@angular/router';
       SalaComponent,MatTabsModule, RouterModule, MatIconModule]
 })
 export class AppComponent {
-  title = 'cineStar';
+  title = 'CineStar';
 }
