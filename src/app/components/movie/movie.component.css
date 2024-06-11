@@ -1,9 +1,9 @@
 .movie-poster {
-  display: flex; /* Enable flexbox layout */
-  align-items: center; /* Align items vertically in the center */
+  display: flex; 
+  align-items: center; 
   max-width:auto;
-  background-color:rgb(29, 28, 28); /* Light background color */
-  color: #333; /* Dark text color for better contrast */
+  background-color:rgb(29, 28, 28); 
+  color: #333; 
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -14,9 +14,10 @@
 
 h3 {
   margin: 5px 0;
-  text-align: center; /* Align text to the left */
+  text-align: center; 
   color: rgb(46, 45, 45);
   padding: auto;
+  align-items: center;
 }
 .movie-poster img {
   width: auto;

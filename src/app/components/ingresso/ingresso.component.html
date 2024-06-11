@@ -1,37 +1,43 @@
-<table>
-    <thead>
-      <tr>
-        <th>Tipo do ingresso</th>
-        <th>Valor</th>
-        <th>Exibição</th>
-        <th>Tipo de filme</th>
-      </tr>
-   </thead>
-   <tbody>
-      <tr>
-        <th>Meia entrada</th>
-        <th>R${{ingresso.getPreco()/2}}</th>
-        <th>{{ingresso.getExibicao().getDate().toString().padStart(2, '0') + '/' +
-          (this.ingresso.exibicao.getMonth() + 1).toString().padStart(2, '0') + '/' +
-          this.ingresso.exibicao.getFullYear()}}</th>
-        <th>3D e 2D</th>
-      </tr>
-      <tr>
-        <th>Entrada</th>
-        <th>R${{ingresso.getPreco()}}</th>
-        <th>{{ingresso.getExibicao().getDate().toString().padStart(2, '0') + '/' +
-          (this.ingresso.exibicao.getMonth() + 1).toString().padStart(2, '0') + '/' +
-          this.ingresso.exibicao.getFullYear()}}</th>
-        <th>3D e 2D</th>
-      </tr>
-      <tr>
-        <th>Formas de pagamento</th>
-        <th colspan="3">Pix - Cartão de Crédito e Débito - Dinheiro.</th>
-      </tr>
-      <tr>
-        <th>Quem possui meia entrada?</th>
-        <th colspan="3">Estudantes, Professores, Idosos, Crianças de 3 a 12 anos, Doador de Sangue.</th>
-      </tr>
-   </tbody>
+ <div class="ingresso">
+  <h3>Ingressos</h3>
+  <div class="tabela">
+    <table>
+        <thead>
+          <tr>
+            <th>Tipo do ingresso</th>
+            <th>Valor</th>
+            <th>Exibição</th>
+            <th>Tipo de filme</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <th>Meia entrada</th>
+            <th>R${{ingresso.getPreco()/2}}</th>
+            <th>{{ingresso.getExibicao().getDate().toString().padStart(2, '0') + '/' +
+              (this.ingresso.exibicao.getMonth() + 1).toString().padStart(2, '0') + '/' +
+              this.ingresso.exibicao.getFullYear()}}</th>
+            <th>3D e 2D</th>
+          </tr>
+          <tr>
+            <th>Entrada</th>
+            <th>R${{ingresso.getPreco()}}</th>
+            <th>{{ingresso.getExibicao().getDate().toString().padStart(2, '0') + '/' +
+              (this.ingresso.exibicao.getMonth() + 1).toString().padStart(2, '0') + '/' +
+              this.ingresso.exibicao.getFullYear()}}</th>
+            <th>3D e 2D</th>
+          </tr>
+          <tr>
+            <th>Formas de pagamento</th>
+            <th colspan="3">Pix - Cartão de Crédito e Débito - Dinheiro.</th>
+          </tr>
+          <tr>
+            <th>Quem possui meia entrada?</th>
+            <th colspan="3">Estudantes, Professores, Idosos, Crianças de 3 a 12 anos, Doador de Sangue.</th>
+          </tr>
+      </tbody>
 
-</table>
+    </table>
+  </div>
+ </div>
+ 
